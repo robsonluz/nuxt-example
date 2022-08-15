@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxt-example',
+    title: 'Nuxt - Exemplos',
     htmlAttrs: {
       lang: 'en'
     },
@@ -15,6 +15,11 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+
+  server: {
+      host: '0.0.0.0',
+      port: 8080,
+  },  
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [

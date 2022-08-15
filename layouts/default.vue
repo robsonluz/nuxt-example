@@ -1,75 +1,49 @@
 <template>
-  <div>
-    <nav
-      class="navbar header has-shadow is-primary"
-      role="navigation"
-      aria-label="main navigation"
-    >
-      <div class="navbar-brand">
-        <a
-          class="navbar-item"
-          href="/"
-        >
-          <img
-            src="~assets/buefy.png"
-            alt="Buefy"
-            height="28"
-          >
-        </a>
+  <div class="container is-fluid">
 
-        <div class="navbar-burger">
-          <span />
-          <span />
-          <span />
-        </div>
-      </div>
-    </nav>
+    <b-navbar shadow="true">
+        <template #brand>
+            <b-navbar-item tag="router-link" :to="{ path: '/' }">
+                <img
+                    src="https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png"
+                    alt="Lightweight UI components for Vue.js based on Bulma"
+                >
+            </b-navbar-item>
+        </template>
+        <template #start>
+            <b-navbar-item tag="router-link" :to="{ path: '/' }">
+                Home
+            </b-navbar-item>
+            <b-navbar-item tag="router-link" :to="{ path: '/sobre' }">
+                Sobre
+            </b-navbar-item>
+        </template>
 
-    <section class="main-content columns">
-      <aside class="column is-2 section">
-        <p class="menu-label is-hidden-touch">
-          General
+        <template #end>
+            <b-navbar-item tag="div">
+                <div class="buttons">
+                    <a class="button is-primary">
+                        <strong>Cadastre-se</strong>
+                    </a>
+                    <a class="button is-light">
+                        Login
+                    </a>
+                </div>
+            </b-navbar-item>
+        </template>
+    </b-navbar>
+
+    <Nuxt/>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Nuxt exemplo</strong> by Robson Luz. 
+          <a target="_blank" href="https://fae.edu">FAE Centro Universitário</a>
         </p>
-        <ul class="menu-list">
-          <li
-            v-for="(item, key) of items"
-            :key="key"
-          >
-            <NuxtLink
-              :to="item.to"
-              exact-active-class="is-active"
-            >
-              <b-icon :icon="item.icon" /> {{ item.title }}
-            </NuxtLink>
-          </li>
-        </ul>
-      </aside>
-
-      <div class="container column is-10">
-        <Nuxt />
       </div>
-    </section>
+    </footer>      
+    
   </div>
 </template>
 
-<script>
-export default {
-  name: 'DefaultLayout',
-  data () {
-    return {
-      items: [
-        {
-          title: 'Home',
-          icon: 'home',
-          to: { name: 'index' }
-        },
-        {
-          title: 'Inspire',
-          icon: 'lightbulb',
-          to: { name: 'inspire' }
-        }
-      ]
-    }
-  }
-}
-</script>
