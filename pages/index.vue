@@ -19,12 +19,14 @@
         <article class="notification is-primary">
           <p class="title">Título</p>
           <p class="subtitle">Subtítulo</p>
+          <router-link :to="{ path: '/imagens' }">Exemplo de link</router-link>
         </article>
       </div>
       <div class="column is-6">
         <article class="notification is-info">
           <p class="title">Título</p>
           <p class="subtitle">Subtítulo</p>
+          <router-link :to="{ path: '/imagens' }">Exemplo de link</router-link>
         </article>
       </div>      
     </div>
@@ -49,6 +51,8 @@
         </article>
       </div>            
     </div>    
+
+
 
   </div>
 </template>
