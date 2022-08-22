@@ -1,7 +1,7 @@
 <template>
   <div class="container is-fluid">
 
-    <b-navbar shadow="true">
+    <b-navbar>
         <template #brand>
             <b-navbar-item tag="router-link" :to="{ path: '/' }">
                 <img
@@ -14,8 +14,25 @@
             <b-navbar-item tag="router-link" :to="{ path: '/' }">
                 Home
             </b-navbar-item>
-            <b-navbar-item tag="router-link" :to="{ path: '/sobre' }">
-                Sobre
+            <b-navbar-item tag="router-link" :to="{ path: '/imagens' }">
+                Imagens
+            </b-navbar-item>     
+            <b-navbar-dropdown label="Layouts">
+                <b-navbar-item tag="router-link" :to="{ path: '/layout-hero' }">
+                    Hero
+                </b-navbar-item>
+                <b-navbar-item tag="router-link" :to="{ path: '/layout-section' }">
+                    Section
+                </b-navbar-item>
+                <b-navbar-item tag="router-link" :to="{ path: '/layout-media-object' }">
+                    Media Object
+                </b-navbar-item>
+                <b-navbar-item tag="router-link" :to="{ path: '/elements-block' }">
+                    Blocos
+                </b-navbar-item>                                
+            </b-navbar-dropdown>                   
+            <b-navbar-item tag="router-link" :to="{ path: '/tabs' }">
+                Tabs
             </b-navbar-item>
         </template>
 
