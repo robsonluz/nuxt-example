@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section class="hero is-primary mb-5">
+        <section class="hero is-primary">
             <div class="hero-body">
                 <p class="title">
                     Imagens
@@ -19,7 +19,7 @@
         ></b-image>
 
 
-        <div class="columns mt-5">
+        <div class="columns">
             <div class="column is-3">
                 <!-- imagem com tamanho lateral limitado pelo tamanho da coluna -->
                 <b-image

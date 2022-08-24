@@ -14,6 +14,9 @@
             <b-navbar-item tag="router-link" :to="{ path: '/' }">
                 Home
             </b-navbar-item>
+            <b-navbar-item tag="router-link" :to="{ path: '/contato' }">
+                Contato
+            </b-navbar-item>          
             <b-navbar-item tag="router-link" :to="{ path: '/imagens' }">
                 Imagens
             </b-navbar-item>     
