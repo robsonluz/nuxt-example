@@ -1,7 +1,7 @@
 <template>
   <div class="container is-fluid">
 
-    <b-navbar>
+    <b-navbar style="height: 100px">
         <template #brand>
             <b-navbar-item tag="router-link" :to="{ path: '/' }">
                 <img
