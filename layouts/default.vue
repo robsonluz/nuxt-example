@@ -1,12 +1,11 @@
 <template>
   <div class="container is-fluid">
 
-    <b-navbar style="height: 100px">
+    <b-navbar style="height: 80px">
         <template #brand>
             <b-navbar-item tag="router-link" :to="{ path: '/' }">
-                <img
-                    src="https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png"
-                    alt="Lightweight UI components for Vue.js based on Bulma"
+                <img style="max-height: 70px"
+                    :src="require('@/assets/logo.jpg')"
                 >
             </b-navbar-item>
         </template>
@@ -14,9 +13,6 @@
             <b-navbar-item tag="router-link" :to="{ path: '/' }">
                 Home
             </b-navbar-item>
-            <b-navbar-item tag="router-link" :to="{ path: '/contato' }">
-                Contato
-            </b-navbar-item>          
             <b-navbar-item tag="router-link" :to="{ path: '/imagens' }">
                 Imagens
             </b-navbar-item>     
@@ -37,6 +33,9 @@
             <b-navbar-item tag="router-link" :to="{ path: '/tabs' }">
                 Tabs
             </b-navbar-item>
+            <b-navbar-item tag="router-link" :to="{ path: '/contato' }">
+                Contato
+            </b-navbar-item>            
         </template>
 
         <template #end>
@@ -45,9 +44,7 @@
                     <a class="button is-primary">
                         <strong>Cadastre-se</strong>
                     </a>
-                    <a class="button is-light">
-                        Login
-                    </a>
+                    <router-link class="button is-light" :to="{ path: '/login'}">Login</router-link>
                 </div>
             </b-navbar-item>
         </template>

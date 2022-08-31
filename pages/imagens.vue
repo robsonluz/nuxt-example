@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section class="hero is-primary">
+        <section class="hero is-primary mb-5">
             <div class="hero-body">
                 <p class="title">
                     Imagens

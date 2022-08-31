@@ -26,7 +26,7 @@
         <article class="notification is-info">
           <p class="title">Título</p>
           <p class="subtitle">Subtítulo</p>
-          <router-link :to="{ path: '/imagens' }">Exemplo de link</router-link>
+          <b-button tag="router-link" :to="{ path: '/imagens' }" type="is-primary">Exemplo de link com botão</b-button>
         </article>
       </div>      
     </div>
