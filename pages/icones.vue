@@ -40,6 +40,8 @@
             </b-icon>                        
         </section>       
         
+
+        <a href="https://fontawesome.com/icons/" target="_blank">Ícones disponíveis no font awesome</a>
         
     </div>
 </template>
