@@ -36,6 +36,9 @@
             <b-navbar-item tag="router-link" :to="{ path: '/icones' }">
                 Ícones
             </b-navbar-item> 
+            <b-navbar-item tag="router-link" :to="{ path: '/form' }">
+                Formulário
+            </b-navbar-item>    
             <b-navbar-item tag="router-link" :to="{ path: '/contato' }">
                 Contato
             </b-navbar-item>            
