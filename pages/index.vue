@@ -1,17 +1,25 @@
 <template>
   <div>
-    
     <!-- carousel com imagens -->
     <b-carousel>
       <b-carousel-item>
-        <b-image class="image" src="https://picsum.photos/id/431/1230/300"></b-image>
+        <b-image
+          class="image"
+          src="https://picsum.photos/id/431/1230/300"
+        ></b-image>
       </b-carousel-item>
       <b-carousel-item>
-        <b-image class="image" src="https://picsum.photos/id/432/1230/300"></b-image>
-      </b-carousel-item>      
+        <b-image
+          class="image"
+          src="https://picsum.photos/id/432/1230/300"
+        ></b-image>
+      </b-carousel-item>
       <b-carousel-item>
-        <b-image class="image" src="https://picsum.photos/id/433/1230/300"></b-image>
-      </b-carousel-item>            
+        <b-image
+          class="image"
+          src="https://picsum.photos/id/433/1230/300"
+        ></b-image>
+      </b-carousel-item>
     </b-carousel>
 
     <div class="columns mt-5">
@@ -26,9 +34,14 @@
         <article class="notification is-info">
           <p class="title">Título</p>
           <p class="subtitle">Subtítulo</p>
-          <b-button tag="router-link" :to="{ path: '/imagens' }" type="is-primary">Exemplo de link com botão</b-button>
+          <b-button
+            tag="router-link"
+            :to="{ path: '/imagens' }"
+            type="is-primary"
+            >Exemplo de link com botão teste aqui teste</b-button
+          >
         </article>
-      </div>      
+      </div>
     </div>
 
     <div class="columns mt-4">
@@ -49,10 +62,13 @@
           <p class="title">Título</p>
           <p class="subtitle">Subtítulo</p>
         </article>
-      </div>            
-    </div>    
+      </div>
+    </div>
 
-
-
+    <div class="columns">
+      <div class="column">teste</div>
+      <div class="column">teste2</div>
+      <div class="column">teste 3</div>
+    </div>
   </div>
 </template>
