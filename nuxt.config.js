@@ -42,7 +42,8 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/buefy
     'nuxt-buefy',
-    'nuxt-fontawesome'
+    'nuxt-fontawesome',
+    '@nuxtjs/axios',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -53,6 +54,10 @@ export default {
     materialDesignIcons: false,
     defaultIconPack: 'fas',
     defaultIconComponent: 'font-awesome-icon'
+  },  
+
+  axios: {
+    baseURL: 'https://backend-example.robsonjoo.repl.co/', // Used as fallback if no runtime config is provided
   },  
   
   fontawesome: {
