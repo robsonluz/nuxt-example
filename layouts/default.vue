@@ -15,7 +15,10 @@
             </b-navbar-item>
             <b-navbar-item tag="router-link" :to="{ path: '/cidades' }">
                 Cidades
-            </b-navbar-item>          
+            </b-navbar-item>  
+            <b-navbar-item tag="router-link" :to="{ path: '/filmes' }">
+                Filmes
+            </b-navbar-item>            
             <b-navbar-item tag="router-link" :to="{ path: '/imagens' }">
                 Imagens
             </b-navbar-item>     

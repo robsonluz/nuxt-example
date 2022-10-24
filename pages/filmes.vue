@@ -7,10 +7,12 @@
       Título: {{filme.titulo}} <br> 
       Descrição: {{filme.descricao}} <br>
       Sinopse: {{filme.sinopse}} <br>
-
+  
       <div v-for="ator in filme.atores" :key="ator.id">
         {{ator.nome}}        
       </div>
+
+      <img :src="filme.fotoCapa" >
       
     </div>
    
