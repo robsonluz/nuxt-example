@@ -3,7 +3,7 @@ export default {
   head: {
     title: 'Nuxt - Exemplos',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'pt_BR'
     },
     meta: [
       { charset: 'utf-8' },
@@ -28,6 +28,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: '~/plugins/firebase', mode: 'client' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -56,9 +57,38 @@ export default {
     defaultIconComponent: 'font-awesome-icon'
   },  
 
+  
+  proxy: {
+    '/api': {
+        target: `http://localhost:8000`,
+        changeOrigin: true,
+        ws: true,
+        credentials: true,
+        xsrfCookieName: "csrftoken",
+        xsrfHeaderName: "X-CSRFToken"          
+    },
+  },
+
   axios: {
-    baseURL: 'https://backend-example.robsonjoo.repl.co/', // Used as fallback if no runtime config is provided
-  },  
+      proxy: true,
+      prefix: '/api',
+      //baseURL: 'http://localhost:8000/api/',
+      progress: true,
+      credentials: true,
+      debug: true,
+      xsrfCookieName: "csrftoken",
+      xsrfHeaderName: "X-CSRFToken"      
+  },
+
+  /*
+  axios: {
+    //baseURL: 'https://backend-example.robsonjoo.repl.co/', // Used as fallback if no runtime config is provided
+    baseURL: 'http://localhost:8000/', // Used as fallback if no runtime config is provided
+    withCredentials: true,
+    xsrfCookieName: "csrftoken",
+    xsrfHeaderName: "X-CSRFToken"
+  },
+  */  
   
   fontawesome: {
     imports: [

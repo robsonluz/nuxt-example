@@ -14,7 +14,7 @@
 export default {
   
   async asyncData({ $axios }) {
-    const cidades = await $axios.$get('/api/cidades/')
+    const cidades = await $axios.$get('cidades/')
     return { cidades }
   }
   

@@ -28,7 +28,7 @@
 export default {
   
   async asyncData({ $axios }) {
-    const filmes = await $axios.$get('/api/filmes/')
+    const filmes = await $axios.$get('filmes/')
     return { filmes }
   }
   
