@@ -11,10 +11,21 @@ export const getters = {
 export const mutations = {
     currentUser(state, value) {
         state.currentUser = value
-    }
+    },
+
+    cleanCurrentUser(state) {
+        state.currentUser = null;
+    },    
 }
 
 export const actions = {
+    cleanCurrentUser({ commit }) {
+        commit('cleanCurrentUser');
+    },
+    setCurrentUser({ commit }, user) {
+        commit('setCurrentUser', user);
+    },        
+    /*
     async fetchCurrentUser({ state }) {
         console.log('chegou aqui');
         const currentUser = await $axios.$get('currentusuario')
@@ -32,8 +43,9 @@ export const actions = {
             }
 
         }catch(e) {
-           //console.log(e);
+           console.log(e);
         }
         
     }
+    */
 }
