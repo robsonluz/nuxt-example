@@ -53,7 +53,7 @@
         <template #end>
             <template v-if="currentUser">
                 <b-navbar-item tag="div">
-                    {{currentUser.username}}
+                    {{currentUser.nome}}
                 </b-navbar-item>  
                 <b-navbar-item tag="div">
                     <div class="buttons">
@@ -94,7 +94,7 @@ import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 export default {
     computed: {
       currentUser () {
-        return this.$store.getters.currentUser
+        return this.$store.getters.getCurrentUser
       }
     },
     methods: {
@@ -109,7 +109,7 @@ export default {
             console.log('usuario logado');
             console.log(responseUsuario.data);
             //Coloque aqui a rota para quem já está cadastrado
-            self.$router.push({ name: 'Home', force:true, reload:true });
+            self.$router.push({ path: '/', force:true, reload:true });
           }).catch(function (error) {
             console.log('nao existe usuario cadastrado', error)
             //Coloque aqui a sua rota de cadastro
@@ -157,7 +157,7 @@ export default {
         this.$axios.get('logout/').then((responseLogout) => {
           console.log('logout', responseLogout);
           self.$store.dispatch('setCurrentUser', null);
-          self.$router.push({ name: 'Home', force:true, reload:true });
+          self.$router.push({ path: '/', force:true, reload:true });
         });
       }
     }    

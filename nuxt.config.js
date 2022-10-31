@@ -28,8 +28,16 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/firebase', mode: 'client' }
+    { src: '~/plugins/firebase', mode: 'client' },
+    { src: '~/plugins/axios' }
   ],
+
+  router: {
+    middleware: [
+        //'get-current-user',
+        'check-auth'
+    ]
+  },    
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -64,8 +72,8 @@ export default {
         changeOrigin: true,
         ws: true,
         credentials: true,
-        xsrfCookieName: "csrftoken",
-        xsrfHeaderName: "X-CSRFToken"          
+        xcsrfCookieName: "csrftoken",
+        xcsrfHeaderName: "X-CSRFToken"          
     },
   },
 
@@ -76,8 +84,8 @@ export default {
       progress: true,
       credentials: true,
       debug: true,
-      xsrfCookieName: "csrftoken",
-      xsrfHeaderName: "X-CSRFToken"      
+      xcsrfCookieName: "csrftoken",
+      xcsrfHeaderName: "X-CSRFToken"      
   },
 
   /*
