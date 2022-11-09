@@ -44,14 +44,17 @@
             </b-navbar-item> 
             <b-navbar-item tag="router-link" :to="{ path: '/form' }">
                 Formulário
-            </b-navbar-item>    
-            <b-navbar-item tag="router-link" :to="{ path: '/contato' }">
-                Contato
-            </b-navbar-item>            
+            </b-navbar-item>           
         </template>
 
         <template #end>
             <template v-if="currentUser">
+                <b-navbar-item tag="router-link" :to="{ path: '/meus-pedidos' }">
+                    Pedidos
+                </b-navbar-item>               
+                <b-navbar-item tag="router-link" :to="{ path: '/carrinho' }">
+                    Carrinho
+                </b-navbar-item>                 
                 <b-navbar-item tag="div">
                     {{currentUser.nome}}
                 </b-navbar-item>  
@@ -77,6 +80,7 @@
 
     <Nuxt/>
 
+    <hr>
     <footer class="footer">
       <div class="content has-text-centered">
         <p>
