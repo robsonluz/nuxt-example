@@ -70,7 +70,8 @@ export default {
   
   proxy: {
     '/api': {
-        target: `http://localhost:8000`,
+        //target: `http://localhost:8000`,
+        target: 'https://backend-example.robsonjoo.repl.co/',
         changeOrigin: true,
         ws: true,
         credentials: true,

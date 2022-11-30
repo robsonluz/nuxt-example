@@ -25,14 +25,30 @@
         @click="adicionarCarrinho(filme)"
         >Adicionar ao carrinho</b-button
       >
+
+      <hr>
+      <h1>Atores</h1>
+      <div class="box" v-for="ator in atores" :key="ator.id">
+          <router-link :to="{ path: '/', query: { ator: ator.id } }">
+            {{ator.nome}}
+          </router-link>
+      </div>
     </div>
   </div>
 </template>
 <script>
 export default {
-  async asyncData({ $axios }) {
-    const filmes = await $axios.$get("filmes/");
-    return { filmes };
+  async asyncData({ $axios, query }) {
+    var q = "?";
+    
+    if (query.ator) {
+      q += "ator=" + query.ator;
+    }
+    
+    const filmes = await $axios.$get("filmes/" + q);
+    const atores = await $axios.$get("atores/");
+    
+    return { filmes, atores };
   },
 
   computed: {
